@@ -1,0 +1,194 @@
+
+{% extends "portfolio/base.html"%}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content%}
+
+<div class=""style="margin-right:100px;margin-top:200px;position: absolute; opacity: 0.7">
+        <br>
+        <h1 style="color: white;text-decoration: underline;">Full Stack Developer</h1>
+
+        <h3 style="color: white">Python JavaScript Java C HTML CSS</h3>
+        <h3 style="color: white">Django TensorFlow PyTorch ThreeJs</h3>
+        <br>
+        <hr>
+
+        <br>
+        <h1 style="color: white;text-decoration: underline;">About Me</h1>
+        <h3 style="color: white">I love to learn and make new things</h3>
+        <h3 style="color: white"><a style="position: relative; text-decoration: underline;"  href='asdf'>Hire me</a> or take a look below↓</h3>
+    
+
+</div>
+
+<div id="myEl"style="overflow:hidden;position: absolute;margin-bottom: 600px;width: 100%;height: 100%;z-index:-1000; opacity: 0.2;"></div>
+
+<script  src="https://cdn.jsdelivr.net/gh/nealmick/site@latest/cube/static/cube/chessboard-1.0.0.js"defer></script>
+<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" defer></script>
+<script  src="https://cdn.jsdelivr.net/gh/nealmick/site@second/cube/static/cube/chess.js"></script>
+
+
+
+-->  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+<script  src="{% static 'portfolio/chess.js'%}"defer></script>
+<script  src="https://cdn.jsdelivr.net/gh/nealmick/site@latest/cube/static/cube/chessboard-1.0.0.js"></script>
+<script  src="{% static 'portfolio/cube.js'%}" defer></script>
+<script  src="{% static 'portfolio/nc.js'%}" defer></script>
+</div>
+</div>
+<div style="position: static;margin-bottom:300px;margin-left: auto">
+
+</div>  
+<div class="stroke"style="margin-top:80%;opacity: 0.7">
+
+</div>
+
+<div class=""style="margin-top:300px;opacity: 0.7">
+    <br>
+    <br>
+    <center><h1 id='foo' style="text-decoration: underline;">My Portfolio</h1></center>
+  <hr style="width: 60%;">
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-5 content-section2">
+            <center>
+              <div>
+            <h2 style="text-decoration: underline;color:white">Number Classifier <i style="font-size: 0.8em;"class="fa fa-solid fa-feather"></i></h2>
+          </div>
+            <br>
+            <div id="table" class="nc"style="position: relative;margin-right: auto;"></div>
+
+            <br>
+
+            <p>Neural network classifies drawn numbers as integer values 0-9. </p>
+
+
+          <div>
+            <hr>
+            <a href="/nc/" class="btn btn-outline-info"> Check it out! <i class="fa fa-solid fa-feather"></i></a>
+            <a href="https://github.com/nealmick/NumberClassifier" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+
+          </div>
+
+          </center>
+          </div>
+
+
+
+          <div class="col-md-5 content-section2">
+            <center>        
+                <h2 style="text-decoration: underline;color:white">NBA Neural Network <i style="font-size: 0.8em;"class="fa fa-basketball-ball"></i></h2>
+                <p>Predicts NBA game winners by player stats, trained on historical data from the past 20 years.</p>
+        <hr>
+
+                <a href="http://njm.rocks:8000/login/" target="_blank" class="btn btn-outline-info"> Check it out! <i class="fa fa-basketball-ball"></i></a>
+                <a href="https://github.com/nealmick/bb/" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+                
+            </center>
+        </div>
+         
+        </div>
+        <hr>
+        <div class="row justify-content-md-center">
+
+          <div class="col col-md-5 content-section2">
+            <center>
+            <h2 style="text-decoration: underline;color:white">TicTacToe <i style="font-size: 0.8em;"class="fa fa-solid fa-hashtag"></i></h2>
+            <br>
+            <div class="board asdf" id="board" style="position:relative;">
+              <div class="cell" id='box1' data-cell  onclick="box1()"></div>
+              <div class="cell" id='box2' data-cell onclick="box2()"></div>
+              <div class="cell" id='box3' data-cell onclick="box3()"></div>
+              <div class="cell" id='box4' data-cell onclick="box4()"></div>
+              <div class="cell" id='box5' data-cell onclick="box5()"></div>
+              <div class="cell" id='box6' data-cell onclick="box6()"></div>
+              <div class="cell" id='box7' data-cell onclick="box7()"></div>
+              <div class="cell" id='box8' data-cell onclick="box8()"></div>
+              <div class="cell" id='box9' data-cell onclick="box9()"></div>
+            </div>
+            <br>
+            <br>
+            <div style="margin-top:10px">
+            <p>But you never win, checks all possible board states, and might beat you.</p>
+
+            <hr>
+            <a href="/tictactoe/" class="btn btn-outline-info"> Check it out! <i class="fa fa-solid fa-hashtag"></i></a>
+            <a href="https://github.com/nealmick/ttt" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+           
+          </div>
+        </center>
+          </div>
+            <div class="col col-md-5 content-section2">
+                <center>
+                    <h2 style="text-decoration: underline;color:white">Cube Solver<i style="font-size: 0.8em;"class="fa fa-cube"></i></h2>
+                    
+                    <div id="myEl2"style="overflow:hidden;position: relative;margin-bottom: 25px;width: 100%;height: 250px;z-index:-1000; opacity: 0.5;"></div>
+                    
+                    <br>
+                    <p>Solves itself instantly and is rendered in-browser with intuitive controls.</p>
+            <hr>
+
+                    <a href="/cube/" class="btn btn-outline-info"> Check it out! <i class="fa fa-cube"></i></a>
+                    <a href="https://github.com/nealmick/cube" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+                </center>
+            </div>
+          </div>
+          <hr>
+          <div class="row justify-content-md-center">
+            <div class="col-md-5 content-section2">
+              <center>
+                  <h2 style="text-decoration: underline;color:white">Chess Bot <i style="font-size: 0.8em;"class="fa fa-chess-board"></i></h2>
+                  
+                  
+                  <div id="myBoard" class="center center2"style="margin: 25px;overflow: hidden;width: 80%;max-width: 500px;height: 80%;">
+          
+                  </div>
+                  
+                  
+                  <p>Evaluates any position in a few seconds, at ratings over 2,000 ELO.</p>
+
+            <hr>
+
+                  <a href="/chess/" class="btn btn-outline-info"> Check it out! <i class="fa fa-chess-board"></i></a>
+                  <a href="https://github.com/nealmick/chess" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+              </center>
+            </div>
+            <div class="col-md-5 content-section2">
+                <center>
+                    <h2 style="text-decoration: underline;color:white">Bug Tracker <i style="font-size: 0.8em;"class="fa fa-solid fa-bug"></i></h2>
+                    <p>Track and destroy bugs with maximum effectiveness.</p>
+            <hr>
+            <a href="/bugs/" class="btn btn-outline-info"> Check it out! <i class="fa fa-solid fa-bug"></i></a>
+            <a href="https://github.com/nealmick/BugTracker" target="_blank" class="btn btn-outline-info"> GitHub! <i class="fab fa-github"></i></a>
+                  
+
+                </center>
+              </div>
+  
+          </div>
+
+
+      </div>
+    
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/nealmick/site@latest/cube/static/cube/chessboard-1.0.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+crossorigin="anonymous"></script>
+<script  src="https://cdn.jsdelivr.net/gh/nealmick/site@latest/cube/static/cube/chessboard-1.0.0.js"></script>
+    
+<div class="container"style="position:relative">
+
+
+</div>
+{% endblock content %}
